@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    table {
+        
+        width: 100%;
+    }
+    
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    
+ 
+    .even {
+        background-color: red;
+    }
+    
+    .odd {
+        background-color: green;
+    }
+</style>
+<body>
+    <table id="table">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            
+        </tr>
+        <tr>
+            <td>Pavan</td>
+            <td>24</td>
+            
+        </tr>
+        <tr>
+            <td>Karan</td>
+            <td>25</td>
+            
+        </tr>
+        <tr>
+            <td>Shubham</td>
+            <td>25</td>
+            
+        </tr>
+        <tr>
+            <td>Avinash</td>
+            <td>28</td>
+           
+        </tr>
+    </table>
+
+    <script>
+       
+        var table = document.getElementById("table");
+        var rows = table.getElementsByTagName("tr");
+        
+        for (var i = 0; i < rows.length; i++) {
+            if (i % 2 === 0) {
+                rows[i].className = "even";
+            } else {
+                rows[i].className = "odd";
+            }
+        }
+    </script>
+</body>
+</html>
